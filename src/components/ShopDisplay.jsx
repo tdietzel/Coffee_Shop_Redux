@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 const ShopDisplay = (props) => {
   const { coffee, onItemClick } = props;
 
   return (
     <div className="coffee-list">
-      <h2>Coffee List</h2>
+      <h2>Available Coffee List</h2>
       <ul>
         {coffee.map(burlap => (
           <li key={burlap.id} onClick={() => onItemClick(burlap)} className="shop-items">{burlap.name}</li>

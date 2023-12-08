@@ -5,9 +5,9 @@ function NewInventoryForm({ onSubmit }) {
     e.preventDefault();
     const newBurlap = {
       name: e.target.name.value,
-      origin: e.target.origin.value,
+      origin: e.target.origin.value.toLowerCase(),
       price: e.target.price.value,
-      roast: e.target.roast.value,
+      roast: e.target.roast.value.toLowerCase(),
       quantity: 130,
       id: v4()
     };
@@ -18,11 +18,11 @@ function NewInventoryForm({ onSubmit }) {
   return (
     <div className="form-styling">
       <form onSubmit={handleNewInventory}>
-        <h2>Add a new Burlap</h2>
+        <h2>Add Inventory</h2>
       <input
         type='text'
         name='name'
-        placeholder='Name of burlap' 
+        placeholder='Name' 
         required
       />
       <input
@@ -40,10 +40,11 @@ function NewInventoryForm({ onSubmit }) {
       <input
         type='text'
         name='roast'
-        placeholder='Type (light, medium, dark)' 
+        placeholder='light, medium or dark' 
         required
       />
-      <button style={{ textAlign: 'center' }} type="submit">Add Burlap</button>
+      <br />
+      <button type="submit" style={{ textAlign: 'center', marginTop: '10px' }} class="btn btn-success">Add Burlap</button>
       </form>
     </div>
   );

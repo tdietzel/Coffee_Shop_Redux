@@ -4,7 +4,7 @@ const CoffeeDetails = (props) => {
   const coffee = props.coffee;
   return (
     <div>
-      <h1>Name: {coffee.name}</h1>
+      <h1>{coffee.name}</h1>
       <h3>Origin: {coffee.origin}</h3>
       <h3>Price: ${coffee.price}</h3>
       <h3>Roast: {coffee.roast}</h3>

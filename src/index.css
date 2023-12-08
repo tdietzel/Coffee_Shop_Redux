@@ -3,8 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 10px;
+  justify-content: center;
   margin-bottom: 10px;
+  background-color: #16d277;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .shop-items:hover {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
@@ -13,7 +17,10 @@
 /* ShopDisplay.jsx | div className="coffee-list" */
 .coffee-list {
   text-align: center;
-  padding-left: 50px;
+}
+.coffee-list h2 {
+  color:white;
+  margin-top: 45px;
 }
 
 /* NewInventoryForm.jsx | div className="form-styling" */
@@ -25,5 +32,36 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
+  background-image: url("./assets/beans.png");
+  background-position: center center;
+  background-size: cover;
   text-align: center;
+}
+
+.form-styling h2 {
+  color:white;
+}
+
+/* ShopControl.jsx | div className="coffee-details" */
+.coffee-details {
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("./assets/coffee-background.jpg");
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+.coffee-details-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFDD0;
+  padding: 30px;
+  border-radius: 25px;
 }
