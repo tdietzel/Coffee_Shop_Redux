@@ -8,6 +8,7 @@ function NewInventoryForm({ onSubmit }) {
       origin: e.target.origin.value,
       price: e.target.price.value,
       roast: e.target.roast.value,
+      quantity: 130,
       id: v4()
     };
 

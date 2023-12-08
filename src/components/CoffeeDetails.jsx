@@ -8,6 +8,7 @@ const CoffeeDetails = (props) => {
       <h3>Origin: {coffee.origin}</h3>
       <h3>Price: ${coffee.price}</h3>
       <h3>Roast: {coffee.roast}</h3>
+      <h3>Quantity: {coffee.quantity}</h3>
     </div>
   );
 }
@@ -17,7 +18,8 @@ CoffeeDetails.propTypes = {
   name: PropTypes.string,
   origin: PropTypes.string,
   price: PropTypes.number,
-  roast: PropTypes.string
+  roast: PropTypes.string,
+  quantity: PropTypes.number
 }
 
 export default CoffeeDetails;
