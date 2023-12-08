@@ -12,12 +12,12 @@ const ShopControl = () => {
 
   const [selectedCoffee, setSelectedCoffee] = useState(null);
 
-  const handleHomeShop = () => {
-    setSelectedCoffee(null);
-  };
-
   const showCoffee = (coffee) => {
     setSelectedCoffee(coffee);
+  };
+
+  const handleHomeShop = () => {
+    setSelectedCoffee(null);
   };
 
   const handleNewInventory = (newBurlap) => {
@@ -41,6 +41,14 @@ const ShopControl = () => {
     });
   }
 
+  const handleDelete = () => {
+    setCoffee((prevCoffee) => {
+      const updatedCoffee = prevCoffee.filter((item) => item.id !== selectedCoffee.id);
+      setSelectedCoffee(null);
+      return updatedCoffee;
+    });
+  }
+
   return (
     <div>
       {selectedCoffee ? (
@@ -48,6 +56,7 @@ const ShopControl = () => {
           <div className="coffee-details-inner">
           <CoffeeDetails coffee={selectedCoffee} />
           <button onClick={handlePurchase} style={{ marginBottom: '10px' }} class="btn btn-dark">Sold a Pound</button>
+          <button onClick={handleDelete} style={{ marginBottom: '10px' }} class="btn btn-dark">Delete Burlap</button>
           <button onClick={handleHomeShop} class="btn btn-dark">Back to Shop</button>
           </div>
         </div>

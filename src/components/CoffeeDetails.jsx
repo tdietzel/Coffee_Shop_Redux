@@ -4,7 +4,7 @@ const CoffeeDetails = (props) => {
   const coffee = props.coffee;
   return (
     <div>
-      <h1>{coffee.name}</h1>
+      <h1 style={{ color: '#800000' }}>{coffee.name}</h1>
       <h3>Origin: {coffee.origin}</h3>
       <h3>Price: ${coffee.price}</h3>
       <h3>Roast: {coffee.roast}</h3>
@@ -16,12 +16,14 @@ const CoffeeDetails = (props) => {
 }
 
 CoffeeDetails.propTypes = {
-  coffee: PropTypes.object,
-  name: PropTypes.string,
-  origin: PropTypes.string,
-  price: PropTypes.number,
-  roast: PropTypes.string,
-  quantity: PropTypes.number
-}
+  coffee: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    origin: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    roast: PropTypes.string.isRequired,
+    quantity: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+  }).isRequired,
+};
 
 export default CoffeeDetails;

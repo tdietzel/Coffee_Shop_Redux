@@ -16,9 +16,15 @@ const ShopDisplay = (props) => {
 }
 
 ShopDisplay.propTypes = {
-  coffee: PropTypes.array,
-  name: PropTypes.string,
-  id: PropTypes.number
+  coffee: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    origin: PropTypes.string,
+    price: PropTypes.string,
+    roast: PropTypes.string,
+    quantity: PropTypes.number,
+    id: PropTypes.number,
+  })),
+  onItemClick: PropTypes.func,
 };
 
 export default ShopDisplay;

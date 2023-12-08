@@ -50,4 +50,8 @@ function NewInventoryForm({ onSubmit }) {
   );
 }
 
+NewInventoryForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
+
 export default NewInventoryForm;
