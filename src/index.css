@@ -1,0 +1,29 @@
+/* ShopDisplay.jsx | li className="shop-item" */
+.shop-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.shop-items:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+
+/* ShopDisplay.jsx | div className="coffee-list" */
+.coffee-list {
+  text-align: center;
+  padding-left: 50px;
+}
+
+/* NewInventoryForm.jsx | div className="form-styling" */
+.form-styling {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  text-align: center;
+}

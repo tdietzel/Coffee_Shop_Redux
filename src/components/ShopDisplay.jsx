@@ -4,11 +4,11 @@ const ShopDisplay = (props) => {
   const { coffee, onItemClick } = props;
 
   return (
-    <div>
+    <div className="coffee-list">
       <h2>Coffee List</h2>
       <ul>
         {coffee.map(burlap => (
-          <li key={burlap.id} onClick={() => onItemClick(burlap)}>{burlap.name}</li>
+          <li key={burlap.id} onClick={() => onItemClick(burlap)} className="shop-items">{burlap.name}</li>
         ))}
       </ul>
     </div>

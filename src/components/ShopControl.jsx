@@ -5,7 +5,7 @@ import NewInventoryForm from './NewInventoryForm';
 
 const ShopControl = () => {
   const [coffee, setCoffee] = useState([
-    { name: 'Deja Brew', origin: 'guatemala', price: '9', roast: 'dark', quantity: 130, id: 0 },
+    { name: 'Deja Brew', origin: 'guatemala', price: '9', roast: 'dark', quantity: 13, id: 0 },
     { name: 'Best Beans', origin: 'colombia', price: '11', roast: 'medium', quantity: 130, id: 1 },
     { name: 'Mocha Mountain Coffee', origin: 'seattle', price: '8', roast: 'dark', quantity: 130, id: 2 },
   ]);
@@ -51,8 +51,8 @@ const ShopControl = () => {
         </div>
       ) : (
         <div>
-          <ShopDisplay coffee={coffee} onItemClick={showCoffee} />
           <NewInventoryForm onSubmit={handleNewInventory}/>
+          <ShopDisplay coffee={coffee} onItemClick={showCoffee} />
         </div>
       )}
     </div>

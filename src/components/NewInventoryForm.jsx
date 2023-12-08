@@ -16,7 +16,7 @@ function NewInventoryForm({ onSubmit }) {
   };
 
   return (
-    <div>
+    <div className="form-styling">
       <form onSubmit={handleNewInventory}>
         <h2>Add a new Burlap</h2>
       <input
@@ -43,7 +43,7 @@ function NewInventoryForm({ onSubmit }) {
         placeholder='Type (light, medium, dark)' 
         required
       />
-      <button type="submit">Add Burlap</button>
+      <button style={{ textAlign: 'center' }} type="submit">Add Burlap</button>
       </form>
     </div>
   );
