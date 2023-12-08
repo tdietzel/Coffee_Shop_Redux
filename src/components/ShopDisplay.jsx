@@ -19,10 +19,10 @@ ShopDisplay.propTypes = {
   coffee: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
     origin: PropTypes.string,
-    price: PropTypes.string,
+    price: PropTypes.number,
     roast: PropTypes.string,
     quantity: PropTypes.number,
-    id: PropTypes.number,
+    id: PropTypes.string,
   })),
   onItemClick: PropTypes.func,
 };

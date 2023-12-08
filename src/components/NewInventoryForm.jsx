@@ -1,4 +1,5 @@
 import { v4 } from 'uuid';
+import PropTypes from 'prop-types'
 
 function NewInventoryForm({ onSubmit }) {
   const handleNewInventory = (e) => {
@@ -6,7 +7,7 @@ function NewInventoryForm({ onSubmit }) {
     const newBurlap = {
       name: e.target.name.value,
       origin: e.target.origin.value.toLowerCase(),
-      price: e.target.price.value,
+      price: parseInt(e.target.price.value),
       roast: e.target.roast.value.toLowerCase(),
       quantity: 130,
       id: v4()
@@ -44,14 +45,14 @@ function NewInventoryForm({ onSubmit }) {
         required
       />
       <br />
-      <button type="submit" style={{ textAlign: 'center', marginTop: '10px' }} class="btn btn-success">Add Burlap</button>
+      <button type="submit" style={{ textAlign: 'center', marginTop: '10px' }} className="btn btn-success">Add Burlap</button>
       </form>
     </div>
   );
 }
 
 NewInventoryForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func
 };
 
 export default NewInventoryForm;
