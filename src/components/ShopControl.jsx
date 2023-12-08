@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ShopDisplay from './ShopDisplay';
 import CoffeeDetails from './CoffeeDetails';
+import NewInventoryForm from './NewInventoryForm';
 
 const ShopControl = () => {
   const [coffee, setCoffee] = useState([
@@ -19,6 +20,13 @@ const ShopControl = () => {
     setSelectedCoffee(coffee);
   };
 
+  const handleNewInventory = (newBurlap) => {
+    setCoffee((prevCoffee) => {
+      const updatedCoffee = [...prevCoffee, newBurlap];
+      return updatedCoffee;
+    });
+  }
+
   return (
     <div>
       {selectedCoffee ? (
@@ -29,6 +37,7 @@ const ShopControl = () => {
       ) : (
         <div>
           <ShopDisplay coffee={coffee} onItemClick={showCoffee} />
+          <NewInventoryForm onSubmit={handleNewInventory}/>
         </div>
       )}
     </div>
