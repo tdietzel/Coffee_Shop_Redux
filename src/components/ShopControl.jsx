@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react'
 import ShopDisplay from './ShopDisplay.jsx'
 import CoffeeDetails from './CoffeeDetails.jsx'
