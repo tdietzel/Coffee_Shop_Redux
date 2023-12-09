@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import ShopDisplay from './ShopDisplay'
-import CoffeeDetails from './CoffeeDetails'
-import NewInventoryForm from './NewInventoryForm'
+import ShopDisplay from './ShopDisplay.jsx'
+import CoffeeDetails from './CoffeeDetails.jsx'
+import NewInventoryForm from './NewInventoryForm.jsx'
 
 const ShopControl = () => {
   const [coffee, setCoffee] = useState([
