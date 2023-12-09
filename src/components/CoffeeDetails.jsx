@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const CoffeeDetails = (props) => {
   const coffee = props.coffee;
@@ -9,6 +9,7 @@ const CoffeeDetails = (props) => {
       <h3>Origin: {coffee.origin}</h3>
       <h3>Price: $ {coffee.price}</h3>
       <h3>Roast: {coffee.roast}</h3>
+      <h3>Gross Sales: ${coffee.profit}</h3>
       {coffee.quantity <= 0 ? (<h3 style={{ color: 'red' }}>Quantity: Out of Stock</h3>)
       :coffee.quantity <= 10 ? (<><h3>Quantity: {coffee.quantity}</h3> <h3 style={{ color: '#ffcc00' }}>"Almost out of stock!"</h3></>)
       :(<h3>Quantity: {coffee.quantity}</h3>)}

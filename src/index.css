@@ -38,9 +38,12 @@
   background-size: cover;
   text-align: center;
 }
-
 .form-styling h2 {
   color:white;
+}
+.button-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ShopControl.jsx | div className="coffee-details" */
