@@ -41,10 +41,6 @@
 .form-styling h2 {
   color:white;
 }
-.button-row {
-  display: flex;
-  justify-content: space-between;
-}
 
 /* ShopControl.jsx | div className="coffee-details" */
 .coffee-details {
@@ -68,4 +64,8 @@
   background-color: #FFFDD0;
   padding: 30px;
   border-radius: 25px;
+}
+.coffee-details-inner button {
+  font-weight: 600;
+  margin-bottom: 10px;
 }

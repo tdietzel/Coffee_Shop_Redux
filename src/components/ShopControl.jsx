@@ -77,20 +77,20 @@ const ShopControl = () => {
         <div className="coffee-details">
           <div className="coffee-details-inner">
             <EditInventoryForm editedCoffee={editedCoffee} onSubmit={handleEditSubmit}/>
-            <button onClick={handleHomeShop} style={{ marginTop: '10px' }} className="btn btn-dark">Back to Shop</button>
+            <button onClick={handleHomeShop} className="btn btn-dark">Back to Shop</button>
           </div>
         </div>
       ) : selectedCoffee ? (
         <div className="coffee-details">
           <div className="coffee-details-inner">
             <CoffeeDetails coffee={selectedCoffee} />
-            <div className="button-row">
-              <button onClick={handlePurchase} style={{ marginBottom: '10px', marginRight: '5px' }} className="btn btn-dark"> Sold a Pound </button>
-              <button onClick={handleDelete} style={{ marginBottom: '10px'}} className="btn btn-dark"> Delete Burlap </button>
+            <div>
+              <button onClick={handlePurchase} style={{ marginRight: '5px'}} className="btn btn-success"> Sold a Pound </button>
+              <button onClick={handleDelete} className="btn btn-danger"> Delete Burlap </button>
             </div>
-            <div className="button-row">
-            <button onClick={handleEdit} style={{ marginBottom: '10px', marginRight: '5px' }} className="btn btn-dark"> Edit Burlap </button>
-              <button onClick={handleHomeShop} style={{ marginBottom: '10px'}} className="btn btn-dark"> Back to Shop </button>
+            <div>
+            <button onClick={handleEdit} style={{ marginRight: '5px'}} className="btn btn-secondary"> Edit Burlap </button>
+              <button onClick={handleHomeShop} className="btn btn-dark"> Back to Shop </button>
             </div>
           </div>
         </div>

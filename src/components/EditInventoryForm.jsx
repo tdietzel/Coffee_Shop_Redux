@@ -64,7 +64,7 @@ const EditInventoryForm = ({ editedCoffee, onSubmit }) => {
           onChange={handleChange}
         />
       <br />
-      <button type="submit" className="btn btn-dark">Save Changes</button>
+      <button type="submit" className="btn btn-success">Save Changes</button>
     </form>
   );
 };

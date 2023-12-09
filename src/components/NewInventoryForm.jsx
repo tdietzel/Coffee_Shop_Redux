@@ -46,7 +46,7 @@ function NewInventoryForm({ onSubmit }) {
         required
       />
       <br />
-      <button type="submit" style={{ textAlign: 'center', marginTop: '10px' }} className="btn btn-success">Add Burlap</button>
+      <button type="submit" style={{ textAlign: 'center', marginTop: '10px', fontWeight: 900 }} className="btn btn-info">Add Burlap</button>
       </form>
     </div>
   );
