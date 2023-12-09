@@ -17,7 +17,7 @@
 The primary functionality of the application is to manage a coffee shop's inventory. Users can add new coffee products, view details, make purchases, and delete items from the inventory.
 
 ## Demo
-You can try out the live demo of the Coffee Shop Inventory Tracker [here](#).
+You can try out the live demo of the Coffee Shop Inventory Tracker [here](https://tdietzel.github.io/Coffee_Shop_Inventory/).
 
 ## Technologies Used
 - HTML
@@ -60,7 +60,7 @@ Follow these steps to set up the project locally:
 ## Usage
 To use Coffee Shop Inventory Tracker:
 
-1. Visit the website [Here](#).
+1. Visit the website [Here](https://tdietzel.github.io/Coffee_Shop_Inventory/).
 2. Explore the coffee shop inventory.
 3. Add new inventory items using the form provided.
 4. View detailed information about each coffee product.
