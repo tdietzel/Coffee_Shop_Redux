@@ -16,6 +16,8 @@
 ## About
 The primary functionality of the application is to manage a coffee shop's inventory. Users can add new coffee products, view details, make purchases, and delete items from the inventory.
 
+## Diagram
+![Diagram](CoffeeShopDiagram.drawio.png)
 ## Demo
 You can try out the live demo of the Coffee Shop Inventory Tracker [here](https://tdietzel.github.io/Coffee_Shop_Inventory/).
 
