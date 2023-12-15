@@ -1,4 +1,4 @@
-import shopControlReducer, { addBurlap, deleteBurlap, showBurlap, editBurlap, updateBurlap, purchasedPound } from '../../redux/shopControlSlice'
+import shopControlReducer, { addBurlap, deleteBurlap, showBurlap, editBurlap, updateBurlap, purchasedPound, backToShop, backToShop } from '../../redux/shopControlSlice'
 import { expect, describe, test } from "vitest"
 
 describe('shopControlSlice', () => {
@@ -94,5 +94,22 @@ describe('shopControlSlice', () => {
     const newState = shopControlReducer(initialState, purchasedPound());
     expect(newState.burlaps[0].quantity).toEqual(129);
     expect(newState.burlaps[0].profit).toEqual(9);
+  });
+  
+  test('update state to return to home page', () => {
+    const currentSelectedBurlap = { name: 'Deja Brew', origin: 'guatemala', price: 9, roast: 'dark', quantity: 130, profit: 0, id: '0' };
+    const initialState = {
+      burlaps: [
+        { name: 'Deja Brew', origin: 'guatemala', price: 9, roast: 'dark', quantity: 130, profit: 0, id: '0' },
+      ],
+      selectedBurlap: currentSelectedBurlap,
+      editMode: true,
+      editedBurlap: currentSelectedBurlap,
+    };
+
+    const newState = shopControlReducer(initialState, backToShop());
+    expect(newState.selectedBurlap).toEqual(null);
+    expect(newState.editMode).toEqual(false);
+    expect(newState.editedBurlap).toEqual(null);
   });
 });
