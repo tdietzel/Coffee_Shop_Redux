@@ -18,8 +18,8 @@ const shopControlSlice = createSlice ({
       return state.filter((burlap) => action.payload !== burlap.id);
     },
     showBurlap: (state, action) => {
-      
-    }
+      return { ...state, selectedBurlap: action.payload};
+    },
   }
 });
 
