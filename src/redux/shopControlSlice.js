@@ -37,7 +37,12 @@ const shopControlSlice = createSlice ({
       };
     },
     purchasedPound: (state) => {
-
+      const updatedBurlap = state.burlaps.map((burlap) =>
+        burlap.id === state.selectedBurlap.id ? { ...burlap, quantity: burlap.quantity - 1, profit: burlap.profit + burlap.price } : burlap
+      );
+      return {
+        ...state, burlaps: updatedBurlap
+      };
     }
   }
 });

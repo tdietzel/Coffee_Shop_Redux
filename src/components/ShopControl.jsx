@@ -32,20 +32,20 @@ const ShopControl = () => {
   //   });
   // }
 
-  const handlePurchase = () => {
-    setCoffee((prevCoffee) => {
-      const updatedCoffee = prevCoffee.map((item) => {
-        return item.id === selectedCoffee.id && item.quantity > 0 ? {
-          ...item,
-          quantity: item.quantity - 1,
-          profit: item.profit + item.price
-        } : item
-      })
-      const updatedBurlap = updatedCoffee.find((item) => item.id === selectedCoffee.id);
-      setSelectedCoffee(updatedBurlap);
-      return updatedCoffee;
-    });
-  }
+  // const handlePurchase = () => {
+  //   setCoffee((prevCoffee) => {
+  //     const updatedCoffee = prevCoffee.map((item) => {
+  //       return item.id === selectedCoffee.id && item.quantity > 0 ? {
+  //         ...item,
+  //         quantity: item.quantity - 1,
+  //         profit: item.profit + item.price
+  //       } : item
+  //     })
+  //     const updatedBurlap = updatedCoffee.find((item) => item.id === selectedCoffee.id);
+  //     setSelectedCoffee(updatedBurlap);
+  //     return updatedCoffee;
+  //   });
+  // }
 
   // const handleDelete = () => {
   //   setCoffee((prevCoffee) => {

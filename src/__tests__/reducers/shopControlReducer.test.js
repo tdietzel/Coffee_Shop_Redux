@@ -80,7 +80,7 @@ describe('shopControlSlice', () => {
     expect(newState.burlaps[1].price).toBe(5);
   });
 
-  test('will -1 pound from the selected burlaps quantity', () => {
+  test('will -1 pound from the selected burlaps quantity & update the profit according to price', () => {
     const currentSelectedBurlap = { name: 'Deja Brew', origin: 'guatemala', price: 9, roast: 'dark', quantity: 130, profit: 0, id: '0' };
     const initialState = {
       burlaps: [
@@ -91,7 +91,7 @@ describe('shopControlSlice', () => {
       editedBurlap: null,
     };
 
-    const newState = shopControlReducer(initialState, purchasedPound())
+    const newState = shopControlReducer(initialState, purchasedPound());
     expect(newState.burlaps[0].quantity).toEqual(129);
     expect(newState.burlaps[0].profit).toEqual(9);
   });
