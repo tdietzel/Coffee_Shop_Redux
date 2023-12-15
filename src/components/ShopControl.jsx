@@ -5,19 +5,19 @@ import NewInventoryForm from './NewInventoryForm.jsx'
 import EditInventoryForm from './EditInventoryForm.jsx';
 
 const ShopControl = () => {
-  const [coffee, setCoffee] = useState([
-    { name: 'Deja Brew', origin: 'guatemala', price: 9, roast: 'dark', quantity: 130, profit: 0, id: '0' },
-    { name: 'Best Beans', origin: 'colombia', price: 11, roast: 'medium', quantity: 130, profit: 0, id: '1' },
-    { name: 'Mocha Mountain Coffee', origin: 'seattle', price: 8, roast: 'dark', quantity: 130, profit: 0, id: '2' },
-  ]);
+  // const [coffee, setCoffee] = useState([
+    // { name: 'Deja Brew', origin: 'guatemala', price: 9, roast: 'dark', quantity: 130, profit: 0, id: '0' },
+    // { name: 'Best Beans', origin: 'colombia', price: 11, roast: 'medium', quantity: 130, profit: 0, id: '1' },
+    // { name: 'Mocha Mountain Coffee', origin: 'seattle', price: 8, roast: 'dark', quantity: 130, profit: 0, id: '2' },
+  // ]);
 
-  const [selectedCoffee, setSelectedCoffee] = useState(null);
+  // const [selectedCoffee, setSelectedCoffee] = useState(null);
   const [editMode, setEditMode] = useState(false);
   const [editedCoffee, setEditedCoffee] = useState(null);
 
-  const showCoffee = (coffee) => {
-    setSelectedCoffee(coffee);
-  };
+  // const showCoffee = (coffee) => {
+  //   setSelectedCoffee(coffee);
+  // };
 
   const handleHomeShop = () => {
     setSelectedCoffee(null);
@@ -25,12 +25,12 @@ const ShopControl = () => {
     setEditedCoffee(null);
   };
 
-  const handleNewInventory = (newBurlap) => {
-    setCoffee((prevCoffee) => {
-      const updatedCoffee = [...prevCoffee, newBurlap];
-      return updatedCoffee;
-    });
-  }
+  // const handleNewInventory = (newBurlap) => {
+  //   setCoffee((prevCoffee) => {
+  //     const updatedCoffee = [...prevCoffee, newBurlap];
+  //     return updatedCoffee;
+  //   });
+  // }
 
   const handlePurchase = () => {
     setCoffee((prevCoffee) => {
@@ -47,13 +47,13 @@ const ShopControl = () => {
     });
   }
 
-  const handleDelete = () => {
-    setCoffee((prevCoffee) => {
-      const updatedCoffee = prevCoffee.filter((item) => item.id !== selectedCoffee.id);
-      setSelectedCoffee(null);
-      return updatedCoffee;
-    });
-  }
+  // const handleDelete = () => {
+  //   setCoffee((prevCoffee) => {
+  //     const updatedCoffee = prevCoffee.filter((item) => item.id !== selectedCoffee.id);
+  //     setSelectedCoffee(null);
+  //     return updatedCoffee;
+  //   });
+  // }
 
   const handleEdit = () => {
     setEditMode(true);

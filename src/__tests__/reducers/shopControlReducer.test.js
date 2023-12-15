@@ -1,4 +1,4 @@
-import shopControlReducer, { addBurlap, deleteBurlap } from '../../redux/shopControlSlice'
+import shopControlReducer, { addBurlap, deleteBurlap, showBurlap } from '../../redux/shopControlSlice'
 import { expect, describe, test } from "vitest"
 
 describe('shopControlSlice', () => {
@@ -15,5 +15,20 @@ describe('shopControlSlice', () => {
     { name: 'Best Beans', origin: 'colombia', price: 11, roast: 'medium', quantity: 130, profit: 0, id: '1' }];
     
     expect(shopControlReducer(initialState, deleteBurlap('2'))).toEqual([{ name: 'Best Beans', origin: 'colombia', price: 11, roast: 'medium', quantity: 130, profit: 0, id: '1' }]);
+  });
+
+  test("shows the currently selected burlap", () => {
+    const initialState = {
+      burlaps: [{ name: 'Deja Brew', origin: 'guatemala', price: 9, roast: 'dark', quantity: 130, profit: 0, id: '0' },
+      { name: 'Best Beans', origin: 'colombia', price: 11, roast: 'medium', quantity: 130, profit: 0, id: '1' },
+      { name: 'Mocha Mountain Coffee', origin: 'seattle', price: 8, roast: 'dark', quantity: 130, profit: 0, id: '2' }],
+      selectedBurlap: null,
+    };
+    const currentSelectedBurlap = { name: 'Best Beans', origin: 'colombia', price: 11, roast: 'medium', quantity: 130, profit: 0, id: '1' };
+    const expectedState = {
+      burlaps: initialState.burlaps,
+      selectedBurlap: currentSelectedBurlap,
+    };
+    expect(shopControlReducer(initialState, showBurlap(currentSelectedBurlap))).toEqual(expectedState);
   });
 });
