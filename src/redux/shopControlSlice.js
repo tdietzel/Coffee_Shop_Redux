@@ -23,7 +23,7 @@ const shopControlSlice = createSlice ({
       return { ...state, selectedBurlap: action.payload};
     },
     editBurlap: (state, action) => {
-      
+      return { ...state, editMode: true, editedBurlap: action.payload};
     },
   }
 });

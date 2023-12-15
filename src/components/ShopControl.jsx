@@ -12,8 +12,8 @@ const ShopControl = () => {
   // ]);
 
   // const [selectedCoffee, setSelectedCoffee] = useState(null);
-  const [editMode, setEditMode] = useState(false);
-  const [editedCoffee, setEditedCoffee] = useState(null);
+  // const [editMode, setEditMode] = useState(false);
+  // const [editedCoffee, setEditedCoffee] = useState(null);
 
   // const showCoffee = (coffee) => {
   //   setSelectedCoffee(coffee);
@@ -55,21 +55,21 @@ const ShopControl = () => {
   //   });
   // }
 
-  const handleEdit = () => {
-    setEditMode(true);
-    setEditedCoffee(selectedCoffee);
-  };
+  // const handleEdit = () => {
+  //   setEditMode(true);
+  //   setEditedCoffee(selectedCoffee);
+  // };
 
-  const handleEditSubmit = (editedValues) => {
-    setCoffee((prevCoffee) => {
-      return prevCoffee.map((item) =>
-        item.id === editedCoffee.id ? { ...item, ...editedValues } : item
-      );
-    });
-    setEditMode(false);
-    setSelectedCoffee(null);
-    setEditedCoffee(null);
-  };  
+  // const handleEditSubmit = (editedValues) => {
+  //   setCoffee((prevCoffee) => {
+  //     return prevCoffee.map((item) =>
+  //       item.id === editedCoffee.id ? { ...item, ...editedValues } : item
+  //     );
+  //   });
+  //   setEditMode(false);
+  //   setSelectedCoffee(null);
+  //   setEditedCoffee(null);
+  // };  
 
   return (
     <div>
