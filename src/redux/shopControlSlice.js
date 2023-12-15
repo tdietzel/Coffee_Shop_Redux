@@ -33,12 +33,15 @@ const shopControlSlice = createSlice ({
           burlap.id === editedBurlap.id ? { ...burlap, ...editedValues } : burlap
         ),
         editMode: false,
-        editedBurlap: null,
+        editedBurlap: null
       };
+    },
+    purchasedPound: (state) => {
+
     }
   }
 });
 
 export default shopControlSlice.reducer
-export const { addBurlap, deleteBurlap, showBurlap, editBurlap, updateBurlap } = shopControlSlice.actions
+export const { addBurlap, deleteBurlap, showBurlap, editBurlap, updateBurlap, purchasedPound } = shopControlSlice.actions
 export const shopControlSelector = (state) => state.shopControl
