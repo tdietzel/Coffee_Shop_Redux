@@ -10,9 +10,12 @@ const shopControlSlice = createSlice ({
   name: 'shopControl',
   initialState,
   reducers: {
-
+    addBurlap: (state, action) => {
+      
+    }
   }
 });
 
-export default shopControlSlice.reducer;
-export const shopControlSelector = (state) => state.shopControl;
+export default shopControlSlice.reducer
+export const { addBurlap } = shopControlSlice.actions
+export const shopControlSelector = (state) => state.shopControl
