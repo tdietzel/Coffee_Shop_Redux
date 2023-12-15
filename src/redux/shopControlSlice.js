@@ -26,7 +26,15 @@ const shopControlSlice = createSlice ({
       return { ...state, editMode: true, editedBurlap: action.payload};
     },
     updateBurlap: (state, action) => {
-      
+      const { editedBurlap, editedValues } = action.payload;
+      return {
+        ...state,
+        burlaps: state.burlaps.map((burlap) =>
+          burlap.id === editedBurlap.id ? { ...burlap, ...editedValues } : burlap
+        ),
+        editMode: false,
+        editedBurlap: null,
+      };
     }
   }
 });
