@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-const EditInventoryForm = ({ editedCoffee, onSubmit }) => {
+const EditInventoryForm = ({ editedBurlap, onSubmit }) => {
   const [editedValues, setEditedValues] = useState({
-    name: editedCoffee.name,
-    origin: editedCoffee.origin.toLowerCase(),
-    price: editedCoffee.price,
-    roast: editedCoffee.roast.toLowerCase(),
-    quantity: editedCoffee.quantity,
+    name: editedBurlap.name,
+    origin: editedBurlap.origin.toLowerCase(),
+    price: editedBurlap.price,
+    roast: editedBurlap.roast.toLowerCase(),
+    quantity: editedBurlap.quantity,
   });
 
   const handleChange = (e) => {

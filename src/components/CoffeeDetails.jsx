@@ -1,8 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-
 const CoffeeDetails = (props) => {
-  const coffee = props.coffee;
+  const coffee = props.burlap;
   return (
     <div>
       <h1 style={{ color: '#800000' }}>{coffee.name}</h1>
@@ -16,16 +13,5 @@ const CoffeeDetails = (props) => {
     </div>
   );
 }
-
-CoffeeDetails.propTypes = {
-  coffee: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    origin: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    roast: PropTypes.string.isRequired,
-    quantity: PropTypes.number.isRequired,
-    id: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default CoffeeDetails;

@@ -1,6 +1,4 @@
-import React from 'react'
 import { v4 } from 'uuid'
-import PropTypes from 'prop-types'
 
 function NewInventoryForm({ onSubmit }) {
   const handleNewInventory = (e) => {
@@ -51,9 +49,5 @@ function NewInventoryForm({ onSubmit }) {
     </div>
   );
 }
-
-NewInventoryForm.propTypes = {
-  onSubmit: PropTypes.func
-};
 
 export default NewInventoryForm;
