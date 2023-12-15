@@ -45,7 +45,12 @@ const shopControlSlice = createSlice ({
       };
     },
     backToShop: (state) => {
-
+      return { 
+        ...state,
+        selectedBurlap: null,
+        editMode: false,
+        editedBurlap: null
+      };
     }
   }
 });

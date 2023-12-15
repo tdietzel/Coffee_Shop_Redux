@@ -15,9 +15,9 @@ const ShopControl = () => {
   // const [editMode, setEditMode] = useState(false);
   // const [editedCoffee, setEditedCoffee] = useState(null);
 
-  // const showCoffee = (coffee) => {
-  //   setSelectedCoffee(coffee);
-  // };
+  const showCoffee = (coffee) => {
+    // setSelectedCoffee(coffee);
+  };
 
   const handleHomeShop = () => {
     setSelectedCoffee(null);
@@ -25,51 +25,51 @@ const ShopControl = () => {
     setEditedCoffee(null);
   };
 
-  // const handleNewInventory = (newBurlap) => {
-  //   setCoffee((prevCoffee) => {
-  //     const updatedCoffee = [...prevCoffee, newBurlap];
-  //     return updatedCoffee;
-  //   });
-  // }
+  const handleNewInventory = (newBurlap) => {
+    // setCoffee((prevCoffee) => {
+    //   const updatedCoffee = [...prevCoffee, newBurlap];
+    //   return updatedCoffee;
+    // });
+  }
 
-  // const handlePurchase = () => {
-  //   setCoffee((prevCoffee) => {
-  //     const updatedCoffee = prevCoffee.map((item) => {
-  //       return item.id === selectedCoffee.id && item.quantity > 0 ? {
-  //         ...item,
-  //         quantity: item.quantity - 1,
-  //         profit: item.profit + item.price
-  //       } : item
-  //     })
-  //     const updatedBurlap = updatedCoffee.find((item) => item.id === selectedCoffee.id);
-  //     setSelectedCoffee(updatedBurlap);
-  //     return updatedCoffee;
-  //   });
-  // }
+  const handlePurchase = () => {
+    // setCoffee((prevCoffee) => {
+    //   const updatedCoffee = prevCoffee.map((item) => {
+    //     return item.id === selectedCoffee.id && item.quantity > 0 ? {
+    //       ...item,
+    //       quantity: item.quantity - 1,
+    //       profit: item.profit + item.price
+    //     } : item
+    //   })
+    //   const updatedBurlap = updatedCoffee.find((item) => item.id === selectedCoffee.id);
+    //   setSelectedCoffee(updatedBurlap);
+    //   return updatedCoffee;
+    // });
+  }
 
-  // const handleDelete = () => {
-  //   setCoffee((prevCoffee) => {
-  //     const updatedCoffee = prevCoffee.filter((item) => item.id !== selectedCoffee.id);
-  //     setSelectedCoffee(null);
-  //     return updatedCoffee;
-  //   });
-  // }
+  const handleDelete = () => {
+    // setCoffee((prevCoffee) => {
+    //   const updatedCoffee = prevCoffee.filter((item) => item.id !== selectedCoffee.id);
+    //   setSelectedCoffee(null);
+    //   return updatedCoffee;
+    // });
+  }
 
-  // const handleEdit = () => {
-  //   setEditMode(true);
-  //   setEditedCoffee(selectedCoffee);
-  // };
+  const handleEdit = () => {
+    // setEditMode(true);
+    // setEditedCoffee(selectedCoffee);
+  };
 
-  // const handleEditSubmit = (editedValues) => {
-  //   setCoffee((prevCoffee) => {
-  //     return prevCoffee.map((item) =>
-  //       item.id === editedCoffee.id ? { ...item, ...editedValues } : item
-  //     );
-  //   });
-  //   setEditMode(false);
-  //   setSelectedCoffee(null);
-  //   setEditedCoffee(null);
-  // };  
+  const handleEditSubmit = (editedValues) => {
+    // setCoffee((prevCoffee) => {
+    //   return prevCoffee.map((item) =>
+    //     item.id === editedCoffee.id ? { ...item, ...editedValues } : item
+    //   );
+    // });
+    // setEditMode(false);
+    // setSelectedCoffee(null);
+    // setEditedCoffee(null);
+  };  
 
   return (
     <div>
