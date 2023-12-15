@@ -25,9 +25,12 @@ const shopControlSlice = createSlice ({
     editBurlap: (state, action) => {
       return { ...state, editMode: true, editedBurlap: action.payload};
     },
+    updateBurlap: (state, action) => {
+      
+    }
   }
 });
 
 export default shopControlSlice.reducer
-export const { addBurlap, deleteBurlap, showBurlap, editBurlap } = shopControlSlice.actions
+export const { addBurlap, deleteBurlap, showBurlap, editBurlap, updateBurlap } = shopControlSlice.actions
 export const shopControlSelector = (state) => state.shopControl
