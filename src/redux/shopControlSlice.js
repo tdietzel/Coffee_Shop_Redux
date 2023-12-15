@@ -11,8 +11,8 @@ const shopControlSlice = createSlice ({
   initialState,
   reducers: {
     addBurlap: (state, action) => {
-      
-    }
+      state.push(action.payload);
+    },
   }
 });
 
