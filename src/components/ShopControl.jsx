@@ -27,7 +27,7 @@ const ShopControl = () => {
 
   const handleDelete = () => {
     const selectedBurlap = shopControl.selectedBurlap;
-    dispatch(deleteBurlap(shopControl.burlaps, selectedBurlap.id));
+    dispatch(deleteBurlap(selectedBurlap.id));
   };
 
   const handleEdit = () => {
