@@ -19,19 +19,19 @@ const ShopControl = () => {
 
   const handleNewInventory = (newBurlap) => {
     dispatch(addBurlap(newBurlap));
-  }
+  };
 
   const handlePurchase = () => {
     dispatch(purchasedPound());
-  }
+  };
 
   const handleDelete = () => {
     const selectedBurlap = shopControl.selectedBurlap;
-    dispatch(deleteBurlap(selectedBurlap.id));
-  }
+    dispatch(deleteBurlap(shopControl.burlaps, selectedBurlap.id));
+  };
 
   const handleEdit = () => {
-    dispatch(editBurlap())
+    dispatch(editBurlap(shopControl.selectedBurlap))
   };
 
   const handleEditSubmit = (editedValues) => {
@@ -43,7 +43,7 @@ const ShopControl = () => {
       {shopControl.editMode ? (
         <div className="coffee-details">
           <div className="coffee-details-inner">
-            <EditInventoryForm editedBurlap={shopControl.editedBurlap} onSubmit={handleEditSubmit}/>
+            <EditInventoryForm editedBurlap={shopControl.editedBurlap} onSubmit={handleEditSubmit} />
             <button onClick={handleHomeShop} className="btn btn-dark">Back to Shop</button>
           </div>
         </div>

@@ -14,10 +14,15 @@ const shopControlSlice = createSlice ({
   initialState,
   reducers: {
     addBurlap: (state, action) => {
-      state.push(action.payload);
+      state.burlaps.push(action.payload);
     },
     deleteBurlap: (state, action) => {
-      return state.filter((burlap) => action.payload !== burlap.id);
+      const updatedBurlaps = state.burlaps.filter((burlap) => action.payload !== burlap.id);
+      return {
+        ...state,
+        burlaps: updatedBurlaps,
+        selectedBurlap: null,
+      };
     },
     showBurlap: (state, action) => {
       return { ...state, selectedBurlap: action.payload};
@@ -27,21 +32,25 @@ const shopControlSlice = createSlice ({
     },
     updateBurlap: (state, action) => {
       const { editedBurlap, editedValues } = action.payload;
+      const updatedBurlap = state.burlaps.map((burlap) =>
+        burlap.id === editedBurlap.id ? { ...burlap, ...editedValues } : burlap
+      );
       return {
         ...state,
-        burlaps: state.burlaps.map((burlap) =>
-          burlap.id === editedBurlap.id ? { ...burlap, ...editedValues } : burlap
-        ),
+        burlaps: updatedBurlap,
         editMode: false,
-        editedBurlap: null
+        editedBurlap: null,
+        selectedBurlap: updatedBurlap.find((burlap) => burlap.id === state.selectedBurlap.id)
       };
     },
     purchasedPound: (state) => {
-      const updatedBurlap = state.burlaps.map((burlap) =>
+      const updatedBurlaps = state.burlaps.map((burlap) =>
         burlap.id === state.selectedBurlap.id ? { ...burlap, quantity: burlap.quantity - 1, profit: burlap.profit + burlap.price } : burlap
       );
       return {
-        ...state, burlaps: updatedBurlap
+        ...state,
+        burlaps: updatedBurlaps,
+        selectedBurlap: updatedBurlaps.find((burlap) => burlap.id === state.selectedBurlap.id)
       };
     },
     backToShop: (state) => {
