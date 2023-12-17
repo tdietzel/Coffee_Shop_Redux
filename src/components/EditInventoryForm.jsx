@@ -17,7 +17,14 @@ const EditInventoryForm = ({ editedBurlap }) => {
     const { name, value } = e.target;
     setEditedValues((prevValues) => ({
       ...prevValues,
-      [name]: (name === 'roast' || name === 'origin') ? value.toLowerCase() : value,
+      [name]: (name === 'roast' || name === 'origin') ? value.toLowerCase():
+              (name === 'price') ? parseInt(value) : value
+    }));
+    
+    setEditedValues((prevValues) => ({
+      ...prevValues,
+      [name]: name === 'price' ? parseInt(value) : value,
+      ...(name === 'roast' || name === 'origin' ? { [name]: value.toLowerCase() } : {}),
     }));
   };
 
@@ -54,7 +61,7 @@ const EditInventoryForm = ({ editedBurlap }) => {
       <input
         type="number"
         name="price"
-        value={editedValues.price}
+        value={parseInt(editedValues.price)}
         onChange={handleChange}
       />
       <br />
