@@ -19,7 +19,7 @@ The primary functionality of the application is to manage a coffee shop's invent
 ## Diagram
 ![Diagram](CoffeeShopDiagram.drawio.png)
 ## Demo
-You can try out the live demo of the Coffee Shop Inventory Tracker [here](https://tdietzel.github.io/Coffee_Shop_Inventory/).
+You can try out the live demo of the Coffee Shop Inventory Tracker [here](https://tdietzel.github.io/Coffee_Shop_Redux/).
 
 ## Technologies Used
 - HTML
@@ -28,11 +28,16 @@ You can try out the live demo of the Coffee Shop Inventory Tracker [here](https:
 - NPM (Node Package Manager): for package management
 - Lint: for code quality and style checking
 - Vite: Build tool for modern web development
+- Vitest: for testing the JavaScript code
 - React.js: JavaScript library for building user interfaces
+- Redux: State management library
+- @reduxjs/toolkit: Redux toolkit for efficient Redux development
+- React Redux: Official React bindings for Redux
 - uuid: Library for generating unique identifiers
 
 ## Features
 - **Add New Inventory**: Users can add new coffee products to the inventory.
+- **Edit Inventory**: Users can edit the current inventory items incase of mistakes.
 - **View Coffee Details**: Detailed information about each coffee product is available.
 - **Make Purchases**: Users can simulate selling a pound of coffee, reducing the quantity in the inventory.
 - **Delete Inventory Items**: Unwanted inventory items can be removed from the system.
@@ -43,11 +48,11 @@ Follow these steps to set up the project locally:
 1. Open Git BASH [Download Link](https://gitforwindows.org/)
 2. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/tdietzel/Coffee_Shop_Inventory
+   git clone https://github.com/tdietzel/Coffee_Shop_Redux
    ```
 3. Open the project directory:
    ```bash
-   cd Coffee_Shop_Inventory
+   cd Coffee_Shop_Redux
    ```
 4. Open in a code editor like __Visual Studio Code__.
 5. Open the VS Code terminal and enter this command to install needed dependencies:
@@ -62,7 +67,7 @@ Follow these steps to set up the project locally:
 ## Usage
 To use Coffee Shop Inventory Tracker:
 
-1. Visit the website [Here](https://tdietzel.github.io/Coffee_Shop_Inventory/).
+1. Visit the website [Here](https://tdietzel.github.io/Coffee_Shop_Redux/).
 2. Explore the coffee shop inventory.
 3. Add new inventory items using the form provided.
 4. View detailed information about each coffee product.
