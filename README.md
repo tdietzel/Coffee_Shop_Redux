@@ -86,7 +86,7 @@ I welcome contributions to improve the project. If you'd like to contribute, ple
 
 ## Known Bugs
 
-* _N/A_
+* _Error 404 on GH-Pages_
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
